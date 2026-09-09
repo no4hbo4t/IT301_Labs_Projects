@@ -21,6 +21,7 @@ header {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* Google fonts: Roboto Slab */
 p, header{
     font-family: "Roboto Slab", serif;
     font-weight: 500;
