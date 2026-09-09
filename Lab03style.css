@@ -31,20 +31,20 @@ p, header{
 
 section> ul > li:nth-child(1) {
     font-weight: bold;
-    color: black;
+    color: rgb(22, 3, 69);
     font-size: 17px;
 
 }
 
 section> ul > li:nth-child(2) {
     font-weight: bold;
-    color: black;
+    color: rgb(22, 3, 69);
     font-size: 17px;
 }
 
 section> ul > li:nth-child(3) {
     font-weight: bold;
-    color: black;
+    color: rgb(22, 3, 69);
     font-size: 17px;
 }
 
