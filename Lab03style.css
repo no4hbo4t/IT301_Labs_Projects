@@ -73,6 +73,7 @@ section> ul > li:nth-child(4) {
 }
 
 footer{
-    margin: center;
+    text-align: center;
     color: black;
+    font-style: italic
 }
