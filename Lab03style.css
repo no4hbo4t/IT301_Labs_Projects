@@ -63,6 +63,12 @@ section> ul > li:nth-child(4) {
     font-size: 17px;
 }
 
+section> ul > li:nth-child(5) {
+    font-weight: bold;
+    color: rgb(22, 3, 69);
+    font-size: 17px;
+}
+
 footer{
     text-align: center;
     color: black;
