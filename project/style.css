@@ -1,0 +1,368 @@
+
+/* General website styles */
+body{
+    background-color: #0B1120;
+    margin: 0;
+    color: #F1F5F9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header and navigation */
+.navbar{
+    display: flex;
+    background-color: hsl(221, 38%, 15%);
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo, ul > li a{
+    text-decoration: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-align: center;
+}
+
+ul > li a:hover{
+    color: #38BDF8;
+}
+.navlinks{
+    list-style: none;
+    display: flex;
+}
+ul > li{
+    margin-right: 30px; 
+}
+
+header a{
+    color: #F1F5F9;
+}
+
+.logo{
+    display: flex;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    flex-grow: 1;
+}
+
+/* Homepage styles */
+section{
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+.container{
+    display: flex;
+}
+
+.container a{
+    text-decoration: none;
+    color: #F1F5F9;
+}
+
+.intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.introcontent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 640px;
+    
+}
+.aboveintro {
+    color: #38BDF8;
+    font-weight: bold;
+}
+.intro h1 {
+    font-size: 50px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+span {
+    color: #38BDF8;
+}
+
+.description {
+    color: #CBD5E1;
+    font-size: 18px;
+    max-width: 600px;
+}
+
+.button{
+    display: flex;
+    text-decoration: none;
+    background-color: #38BDF8;
+    width: 120px;
+    height: 40px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    color: #0B1120;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #7DD3FC;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+.resources {
+    margin-top: 60px;
+    margin-bottom: 190px;
+
+}
+
+section > h2, section > p{
+    text-align: center;
+}
+section > p{
+    margin-bottom: 50px;
+}
+.box{
+    background-color: #172033;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    align-items: center;
+
+}
+
+.box:hover{
+    box-shadow: 0px 0px 8px #38BDF8;
+    transform: translateY(-4px)
+
+}
+.box a{
+    color: #38BDF8;
+    margin-bottom: 20px;
+    margin-top: auto;
+    width: 119px
+}
+
+.box a:hover{
+    text-decoration: underline;
+    transform: scale(1.1)
+}
+img{
+    max-width: 300px;
+    height: 200px;
+}
+
+/* Interview preparation page */
+
+
+/* Career roadmap page */
+
+.roadmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.roadmap > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.roadmap > p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.roadmap-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.step {
+    background-color: #172033;
+    padding: 20px;
+    border-left: 5px solid #38BDF8;
+    border-radius: 5px;
+}
+
+.step h2 {
+    color: #38BDF8;
+    margin-top: 0;
+}
+
+.step h3 {
+    color: #F1F5F9;
+    margin-top: 20px;
+}
+
+.step ul {
+    display: block;
+    padding-left: 25px;
+}
+
+
+
+.step a {
+    color: #38BDF8;
+}
+
+.step a:hover {
+    color: #7DD3FC;
+}
+
+/* Security tools page */
+
+/* Contact form styles */
+.contact{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    width: 90%;
+    max-width: 500px;
+}
+.contact input{
+    margin-bottom: 10px;
+}
+.contact > h1{
+    margin-bottom: 0px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    background-color: #172033;
+    color: #F1F5F9;
+    border: 1px solid #64748B;
+    border-radius: 5px;
+}
+
+.contact button {
+    border: none;
+    margin-bottom: 30px;
+}
+/* Footer */
+.mainfooter{
+    text-align:center;
+    background-color: #172033;
+    margin-top: auto;
+}
+.mainfooter p{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+/* Media queries */
+
+/* Smaller screen for main page */
+@media (max-width: 768px) {
+
+    /* Navigation */
+    .navbar {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .navlinks {
+        padding-left: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    ul > li {
+        margin-right: 15px;
+    }
+
+    /* Homepage introduction */
+    .intro {
+        height: auto;
+        min-height: 70vh;
+        padding: 30px 20px;
+    }
+
+    .introcontent {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    /* Resource cards */
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .box {
+        margin-right: 0;
+        padding: 20px;
+    }
+
+    .resources {
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+
+    img {
+        max-width: 100%;
+        height: 200px;
+    }
+}
+
+/* Smaller screen for contact page */
+@media (max-width: 768px) {
+    .contact > p {
+        padding: 10px;
+    }
+}
+/* Smaller screen for roadmap page */
+@media (max-width: 768px) {
+    /* Career roadmap page */
+.roadmap {
+    padding: 30px 15px;
+}
+
+.roadmap h1 {
+    font-size: 28px;
+}
+
+.step {
+    padding: 15px;
+}
+
+.step h2 {
+    font-size: 20px;
+}
+}

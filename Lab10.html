@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Roadmap | The CyberWay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        let answer;
+        let message = 'Enter the total restaurant bill amount.';
+        do {
+        answer = prompt(message);
+
+        if (answer === "" || Number(answer) === 0) {
+            message = 'Enter a valid bill amount greater than zero.';
+        }
+        else if (Number(answer) < 0) {
+            message = 'Negative values are not allowed. Enter a valid amount.';
+        }
+        else if (isNaN(Number(answer))) {
+            message = 'Input is invalid. Enter a valid number.';
+        }
+
+    } while (answer === null || answer === "" || Number(answer) <= 0 || isNaN(Number(answer)));
+    let tip = Number(answer);
+    let calculation = tip * 0.10;
+    let result = `For a bill of $${answer}, the tip should be $${calculation}.`;
+    console.log(result);
+    document.write(result);
+    </script>
+</body>
+</html>
+
