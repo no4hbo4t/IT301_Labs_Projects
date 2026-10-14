@@ -18,12 +18,18 @@
     </style>
 </head>
 <body>
-    <p id ='box'>Click!: </p>
+    <p id ='box'>Click!:</p>
 
     <script>
-        const name = document.getElementbyId('box');
+    const box = document.getElementById('box');
+    function myFunction(event){
+        box.style.backgroundColor = "lightgray";
+        box.textContent = 'You did it'
+        box.style.color = 'balck';
+        console.log(event)
+    }
 
-        box.addEventListener('click', fucntion(){box.style.backgroundColor = "lightgray"});
+    box.addEventListener('click', myFunction);
     </script>
 </body>
 </html>

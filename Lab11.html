@@ -15,13 +15,17 @@
             width: 200px;
         }
         #box{
-            height: 400px;
-            width: 400px;
+            height: 100px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
-    <div id = 'box'><button id ='button'>Click!</button></div>
+    <div id = 'box'></div>
+    <button id ='button'>Click!</button>
     
     <script>
         const button = document.getElementById('button');
@@ -52,8 +56,8 @@
         
         const box = document.getElementById('box');
         function five(event){
-            button.style.backgroundColor = "lightblue"
-            button.textContent = 'I see you! 👀'
+            box.style.backgroundColor = "lightblue"
+            box.textContent = 'I see you! 👀'
         }
         button.addEventListener("mousemove", five);
 
