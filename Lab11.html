@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        #button:hover{
+            cursor: pointer;
+        }
+        #button{
+            background-color: blue;
+            font-size: 1.2em;
+            padding: 3px;
+            width: 200px;
+        }
+        #box{
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'box'><button id ='button'>Click!</button></div>
+    
+    <script>
+        const button = document.getElementById('button');
+        function one(event){
+            button.style.backgroundColor = "yellow"
+            button.textContent = 'Do not click! 😠'
+        }
+
+        button.addEventListener("mouseover", one);
+        
+        function two(event){
+            button.style.backgroundColor = "red"
+            button.textContent = 'Ouch! 🤕'
+        }
+        button.addEventListener("click", two);
+
+        function three(event){
+            button.style.backgroundColor = "lightgreen"
+            button.textContent = 'Phew! 😌'
+        }
+        button.addEventListener("mouseout", three);
+
+        function four(event){
+            button.style.backgroundColor = "pink"
+            button.textContent = 'Double trouble! 🤩'
+        }
+        button.addEventListener("dblclick", four);
+        
+        const box = document.getElementById('box');
+        function five(event){
+            button.style.backgroundColor = "lightblue"
+            button.textContent = 'I see you! 👀'
+        }
+        button.addEventListener("mousemove", five);
+
+    </script>
+</body>
+</html>
+
