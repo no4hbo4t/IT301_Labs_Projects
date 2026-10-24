@@ -9,6 +9,16 @@ body{
     flex-direction: column;
 }
 
+/* Body font */
+body {
+    font-family: Arial;
+}
+
+/* Heading font */
+h1, h2, h3 {
+    font-family: Georgia;
+}
+
 /* Header and navigation */
 .navbar{
     display: flex;
@@ -148,7 +158,6 @@ section > p{
     color: #38BDF8;
     margin-bottom: 20px;
     margin-top: auto;
-    width: 119px
 }
 
 .box a:hover{
@@ -161,10 +170,53 @@ img{
 }
 
 /* Interview preparation page */
+.interview {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
 
+.interview > h1 {
+    text-align: center;
+    color: #F1F5F9;
+}
+
+.interview > p {
+    text-align: center;
+    color: #CBD5E1;
+    margin-bottom: 50px;
+}
+
+.interviewsection {
+    margin-bottom: 50px;
+}
+
+.interviewsection h2 {
+    color: #38BDF8;
+    margin-bottom: 20px;
+}
+
+.question {
+    background-color: #172033;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.question h3 {
+    margin-top: 0;
+    color: #F1F5F9;
+}
+
+.question p {
+    color: #CBD5E1;
+}
+
+.question:hover {
+    box-shadow: 0 0 8px #38BDF8;
+}
 
 /* Career roadmap page */
-
 .roadmap {
     display: flex;
     flex-direction: column;
@@ -182,7 +234,7 @@ img{
     margin-bottom: 40px;
 }
 
-.roadmap-container {
+.roadmapcontainer {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -223,7 +275,81 @@ img{
 }
 
 /* Security tools page */
+.tools {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
 
+
+.tools > h1 {
+    text-align: center;
+}
+
+.tools > p {
+    text-align: center;
+    color: #CBD5E1;
+    margin-bottom: 60px;
+}
+
+
+.toolssection {
+    margin-bottom: 60px;
+}
+
+.toolssection h2 {
+    color: #38BDF8;
+    margin-bottom: 25px;
+}
+
+
+.toolscontainer {
+    display: flex;
+    gap: 20px;
+}
+
+.tool {
+    background-color: #172033;
+    padding: 25px;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.tool h3 {
+    margin-top: 0;
+    color: #38BDF8;
+}
+
+.tool p {
+    color: #CBD5E1;
+}
+
+.tool a {
+    color: #38BDF8;
+    text-decoration: none;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.tool a:hover {
+    text-decoration: underline;
+}
+
+.tool:hover {
+    box-shadow: 0 0 8px #38BDF8;
+}
+.toollabel {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 11px;
+    color: #38BDF8;
+}
 /* Contact form styles */
 .contact{
     height: 100vh;
@@ -277,17 +403,13 @@ form{
 
 /* Smaller screen for main page */
 @media (max-width: 768px) {
-
-    /* Navigation */
     .navbar {
         flex-direction: column;
     }
-
     .logo {
         margin-left: 0;
         margin-top: 15px;
     }
-
     .navlinks {
         padding-left: 0;
         flex-wrap: wrap;
@@ -297,8 +419,6 @@ form{
     ul > li {
         margin-right: 15px;
     }
-
-    /* Homepage introduction */
     .intro {
         height: auto;
         min-height: 70vh;
@@ -314,12 +434,10 @@ form{
     .intro h1 {
         font-size: 32px;
     }
-
     .description {
         font-size: 16px;
     }
 
-    /* Resource cards */
     .container {
         flex-direction: column;
         gap: 20px;
@@ -349,20 +467,53 @@ form{
 }
 /* Smaller screen for roadmap page */
 @media (max-width: 768px) {
-    /* Career roadmap page */
-.roadmap {
-    padding: 30px 15px;
+    .roadmap {
+        padding: 30px 15px;
+    }
+    .roadmap h1 {
+        font-size: 28px;
+    }
+
+    .step {
+        padding: 15px;
+    }
+
+
+    .step h2 {
+        font-size: 20px;
+    }
 }
 
-.roadmap h1 {
-    font-size: 28px;
-}
+/* Smaller screen for interview page */
+@media (max-width: 768px) {
+    .interview {
+        padding: 30px 15px;
+    }
 
-.step {
-    padding: 15px;
-}
 
-.step h2 {
-    font-size: 20px;
+    .interview h1 {
+        font-size: 28px;
+    }
+    .question {
+        padding: 15px;
+    }
 }
+/* Smaller screen for security tools page */
+@media (max-width: 768px) {
+
+    .tools {
+        padding: 30px 15px;
+    }
+
+    .tools h1 {
+        font-size: 28px;
+    }
+
+    .toolscontainer {
+        flex-direction: column;
+    }
+
+    .tool {
+        padding: 20px;
+    }
 }
