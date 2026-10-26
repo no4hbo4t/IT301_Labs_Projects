@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Profile</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: lightgray;
+        }
+
+        #profile {
+            background-color: white;
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Random User Profile</h1>
+    <p>Click the button to generate a random user!</p>
+
+    <button id="generateBtn">Generate Profile</button>
+
+    <div id="profile"></div>
+
+    <script>
+        let button = document.getElementById("generateBtn");
+        let profile = document.getElementById("profile");
+
+        const generateProfile = async () => {
+            let p = await fetch('https://randomuser.me/api/');
+            p = await p.json();
+            let user = p.results[0]
+            let picture = user.picture.large;
+            let name = user.name.first + " " + user.name.last;
+            let email = user.email;
+            let phone = user.phone;
+            profile.innerHTML = "";
+            let img = document.createElement("img");
+            img.src = picture;
+            img.alt = "User Profile Picture";
+            let nameText = document.createElement("h2");
+            nameText.textContent = name;
+            let emailText = document.createElement("p");
+            emailText.textContent = email;
+            let phoneText = document.createElement("p");
+            phoneText.textContent = phone;
+            profile.appendChild(img);
+            profile.appendChild(nameText);
+            profile.appendChild(emailText);
+            profile.appendChild(phoneText);
+        };
+
+        button.addEventListener("click", generateProfile);
+    </script>
+</body>
+</html>
