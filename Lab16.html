@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 16</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        .rule{
+            color: red;
+        }
+        .valid{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <form id="form" action="#">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required placeholder="Enter Name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required placeholder="Enter Email">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required placeholder="Enter Password">
+        <div  class="rules" id="password-rules" hidden>
+            <div id="rule-length" class="rule">✖ At least 6 characters</div>
+            <div id="rule-special" class="rule">✖ Must include a special character (!@#$...)</div>
+            <div id="rule-uppercase" class="rule">✖ Must include an uppercase letter (A-Z)</div>
+        </div>
+        <button id="btn">Submit</Button>
+        <div id="message"></div>
+    </form>
+    <script>
+        const form = document.getElementById('form');
+        const message = document.getElementById('message');
+        form.addEventListener('submit', (event)=>{
+            event.preventDefault()
+            let name = document.getElementById('name');
+            let email = document.getElementById('email');
+            let password = document.getElementById('password');
+            if (name.value.trim() == '' || email.value.trim() == '' || password.value.trim() == ''){
+                message.textContent = 'Error, empty input';
+            }else{
+                message.textContent = 'Successful input';
+                form.reset();
+            };
+        });
+        const password = document.getElementById('password');
+        password.addEventListener('input', ()=>{
+            let rules = document.getElementById('password-rules');
+            rules.hidden = false;
+            let one = document.getElementById('rule-length');
+            let two = document.getElementById('rule-special');
+            let three = document.getElementById('rule-uppercase');
+            one.classList.toggle('valid', password.value.length >= 6);
+            two.classList.toggle('valid', /[!@#$%^&*(),.?":{}|<>]/.test(password.value));
+            three.classList.toggle('valid', /[A-Z]/.test(password.value));
+        });
+    </script>
+</body>
+</html>
